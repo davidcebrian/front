@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="row align-items-center bg-secondary he-100">
+    
+    <div class="col-5 offset-1 border border-dark rounded-50l bg bg-white p-3">
+        <div class="row justify-content-center m-2">
+            <h3>
+                Log IN
+            </h3>
+            <form [formGroup]="logForm">
+                <label>E-mail:</label> <br>
+                <input formControlName="email" type="text">
+                <br>
+                <label>Password:</label><br>
+                <input formControlName="password" type="password">
+
+            </form>
+        </div>
+        <div class="row align-items-center justify-content-center m-2">
+            <button class="col-9 btn btn-primary">Log In</button>
+        </div>
+    </div>
+    
+    <div class="col-5 border border-dark rounded-50r bg bg-white p-3">
+        <div class="row align-items-center justify-content-center m-2">
+            <h3>
+                Register
+            </h3>
+        </div>
+        <!--anadir input form react-->
+        <div class="row align-items-center justify-content-center m-2">
+            <button class="col-9 btn btn-primary">Register</button>
+        </div>
+    </div>
+
+</div>
+
