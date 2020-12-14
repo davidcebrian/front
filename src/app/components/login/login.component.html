@@ -1,35 +1,54 @@
 <div class="row align-items-center bg-secondary he-100">
-    
-    <div class="col-5 offset-1 border border-dark rounded-50l bg bg-white p-3">
-        <div class="row justify-content-center m-2">
-            <h3>
-                Log IN
-            </h3>
-            <form [formGroup]="logForm">
-                <label>E-mail:</label> <br>
-                <input formControlName="email" type="text">
-                <br>
-                <label>Password:</label><br>
-                <input formControlName="password" type="password">
 
-            </form>
-        </div>
-        <div class="row align-items-center justify-content-center m-2">
-            <button class="col-9 btn btn-primary">Log In</button>
-        </div>
+  <div class="col-5 offset-1 border border-dark rounded-50 bg bg-white p-3">
+    <div class="row justify-content-center m-1">
+      <h3>LOG IN</h3>
     </div>
-    
-    <div class="col-5 border border-dark rounded-50r bg bg-white p-3">
+    <div class="row justify-content-center m-2">
+      <form [formGroup]="logForm">
+        <label>E-mail</label> <br>
+        <input id="mail" formControlName="mail" type="text" class="form-control">
+        <br>
+        <label>Password</label><br>
+        <input id="password" formControlName="password" type="password" class="form-control">
+
         <div class="row align-items-center justify-content-center m-2">
-            <h3>
-                Register
-            </h3>
+          <button type="submit" class="col-10 btn btn-primary" [disabled]="logForm.invalid">Log In</button>
         </div>
-        <!--anadir input form react-->
-        <div class="row align-items-center justify-content-center m-2">
-            <button class="col-9 btn btn-primary">Register</button>
-        </div>
+      </form>
     </div>
+
+  </div>
+
+  <div class="col-5 border border-dark rounded-50 bg bg-white p-3 m-3">
+    <div class="row justify-content-center m-1">
+      <h3>REGISTER</h3>
+    </div>
+    <div class="row align-items-center justify-content-center m-2">
+      <form [formGroup]="registerForm" (ngSubmit)="crearUser()">
+        <label>Name</label> <br>
+        <input id="name" formControlName="name" type="text" class="form-control">
+        <br>
+        <label>Surname</label><br>
+        <input id="surname" formControlName="surname" type="text" class="form-control">
+        <br>
+        <label>Username</label><br>
+        <input id="userName" formControlName="userName" type="text" class="form-control">
+        <br>
+        <label>Mobile number</label><br>
+        <input id="mobileNum" formControlName="mobileNumber" type="text" class="form-control">
+        <label>E-mail:</label> <br>
+        <input id="mailReg" formControlName="mail" type="text" class="form-control">
+        <br>
+        <label>Password</label><br>
+        <input id="passwordReg" formControlName="password" type="password" class="form-control">
+
+        <div class="row align-items-center justify-content-center m-2">
+          <button class="col-10 btn btn-primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
 
 </div>
-

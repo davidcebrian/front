@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-
+import { UserServiceService } from 'src/app/services/user-service.service';
+import { User } from '../../interfaces/User';
 
 @Component({
   selector: 'login',
@@ -8,15 +9,14 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   logForm: FormGroup;
   registerForm: FormGroup;
 
-  constructor( private build: FormBuilder) { 
+  constructor( private build: FormBuilder, private userService: UserServiceService) { 
 
     this.logForm = this.build.group({
 
-      email: ['', Validators.required, Validators.email],
+      mail: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
 
     })
@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
 
       name: ['', Validators.required],
       surname: ['', Validators.required],
-      username: ['', Validators.required],
+      userName: ['', Validators.required],
       mobileNumber: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      mail: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
 
     })
@@ -35,6 +35,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  crearUser(): void{
+    let userCreated: User;
+    userCreated = this.registerForm.value;
+    this.userService.createUser(this.registerForm.value).subscribe(response => {
+      console.log(response);
+    })
+
   }
 
 }
