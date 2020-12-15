@@ -8,7 +8,14 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 export class NavvarComponent implements OnInit {
 
-  constructor() { }
+  searchForm: FormGroup;
+  constructor( private build: FormBuilder ) { 
+
+    this.searchForm = this.build.group({
+      input: ['']
+    })
+
+  }
 
   ngOnInit(): void {
   }

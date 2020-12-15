@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+.he-30{
+    height: 30vh;
+}
+
 .rounded-50{
     border-radius: 1.5em;
 }
@@ -15,4 +19,12 @@
 .rounded-50r{
     border-top-right-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
+}
+
+
+input, textarea { 
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
 }
