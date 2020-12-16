@@ -9,14 +9,22 @@ import { map } from 'rxjs/operators';
 })
 export class UserServiceService {
 
-  private endPoint = 'http://localhost:8080/user'
+  private endPoint = 'http://localhost:8080'
 
   constructor( private http: HttpClient ) { }
 
   createUser(user: any): Observable<any>{
     let json = JSON.stringify(user);
 
-    return this.http.post(this.endPoint, user);
+    return this.http.post(this.endPoint + '/user', user);
+  }
+
+  getAllPersonajes(): Observable<any> {
+    return this.http.get(this.endPoint + '/personaje'); 
+  }
+
+  getAllAttacks(): Observable<any> {
+    return this.http.get(this.endPoint + '/ataque'); 
   }
 
 

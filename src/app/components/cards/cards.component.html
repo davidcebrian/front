@@ -1,1 +1,13 @@
-<p>cards works!</p>
+<div class="row">
+    <div *ngFor="let personaje of personajes"  class="col-12 col-md-3 card text-white bg-dark my-3 offset-md-2">
+        <div class="card-header">
+           <h5>
+               {{personaje.name}}
+           </h5> 
+        </div>
+        <div class="card-body">
+            <p class="card-title">NIVEL <i class="fas fa-long-arrow-alt-right"></i> {{personaje.nivel}}</p>
+            <p class="card-text">Poder <i class="fas fa-long-arrow-alt-right"></i> {{personaje.poder}}</p>
+            <p class="card-text">Tipo <i class="fas fa-long-arrow-alt-right"></i> {{personaje.cara}}</p>
+        </div>
+</div>

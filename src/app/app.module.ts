@@ -11,6 +11,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NavvarComponent } from './components/navvar/navvar.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { AtaquesComponent } from './components/ataques/ataques.component';
+import { TablaAtaquesComponent } from './components/tabla-ataques/tabla-ataques.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { CardsComponent } from './components/cards/cards.component';
     HomeComponent,
     NavvarComponent,
     SliderComponent,
-    CardsComponent
+    CardsComponent,
+    AtaquesComponent,
+    TablaAtaquesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

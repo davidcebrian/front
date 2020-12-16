@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../../services/user-service.service';
 
 @Component({
   selector: 'cards',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  personajes: any[];
+
+  constructor( private service: UserServiceService) { }
 
   ngOnInit(): void {
+    this.service.getAllPersonajes().subscribe(res =>{
+      this.personajes = res;
+    })
   }
 
 }
