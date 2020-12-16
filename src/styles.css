@@ -7,6 +7,14 @@
     height: 30vh;
 }
 
+.he-40{
+    height: 40vh;
+}
+
+.he-50{
+    height: 50vh;
+}
+
 .rounded-50{
     border-radius: 1.5em;
 }
