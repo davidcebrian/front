@@ -27,5 +27,22 @@ export class UserServiceService {
     return this.http.get(this.endPoint + '/ataque'); 
   }
 
+  createAtaque(ataque: any): Observable<any>{
+    ataque.id = "";
+    let json = JSON.stringify(ataque);
+    return this.http.post(this.endPoint + '/ataque', ataque);
+  }
+
+  modificarAtaque(ataque: any): Observable<any>{
+    let id = ataque.id;
+    let json = JSON.stringify(ataque);
+    return this.http.put(this.endPoint + `/ataque/${id}`, ataque);
+  }
+
+  borrarAtaque(ataque: any): Observable<any>{
+    let id = ataque.id;
+    return this.http.delete(this.endPoint + `ataque/${id}`);
+  }
+
 
 }

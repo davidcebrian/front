@@ -8,10 +8,10 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./tabla-ataques.component.css']
 })
 export class TablaAtaquesComponent implements OnInit, OnDestroy {
-
   dtOptions: DataTables.Settings = {};
   dtTrigger = new Subject();
-  datas:any;
+  datas:any[];
+
   constructor( private userServiceService: UserServiceService) { }
   
 
@@ -29,6 +29,6 @@ this.userServiceService.getAllAttacks().subscribe(res =>{
   }
 
   ngOnDestroy(): void {
-   this.dtTrigger.unsubscribe();
+  this.dtTrigger.unsubscribe();
   }
 }

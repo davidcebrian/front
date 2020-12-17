@@ -14,6 +14,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { AtaquesComponent } from './components/ataques/ataques.component';
 import { TablaAtaquesComponent } from './components/tabla-ataques/tabla-ataques.component';
 import { DataTablesModule } from 'angular-datatables';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DataTablesModule } from 'angular-datatables';
     SliderComponent,
     CardsComponent,
     AtaquesComponent,
-    TablaAtaquesComponent
+    TablaAtaquesComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

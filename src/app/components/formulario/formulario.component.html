@@ -1,0 +1,40 @@
+<hr>
+<div class="d-flex justify-content-center align-items-center flex-column my-2">
+        <h2>REGISTRO</h2>
+        <form class="row col" [formGroup] = "registerForm">
+            <div class="form-group position-relative offset-3">
+                <label for="idusuario">ID:</label>
+                <input type="number" formControlName="id" class="form-control" id="idusuario" placeholder="ID" value="">
+            </div>
+            <div class="form-group position-relative offset-2">
+                <label for="inputNombre">Nombre:</label>
+                <input type="text" formControlName="nombre" class="form-control" id="inputNombre" placeholder="Nombre" value="">
+            </div>
+            <div class="d-block w-100"></div>
+        <div class="form-group position-relative offset-3">
+            <label for="inputEmail">Daño:</label>
+            <input type="text" class="form-control" formControlName="daño" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group position-relative offset-2">
+            <label for="inputNickname">Elemento:</label>
+            <input type="text" class="form-control" formControlName="elemento" id="inputNickname" placeholder="Nickname">
+        </div>
+        <div class="d-block w-100"></div>
+        <div class="form-group position-relative offset-3">
+            <label for="inputPassword">Tipo:</label>
+            <input type="text" class="form-control" formControlName="tipo" id="inputPasword" placeholder="Contraseña">
+        </div>
+        <div class="form-group position-relative offset-2">
+            <label for="inputEdad">Cooldown:</label>
+            <input type="text" class="form-control" formControlName="cooldown" id="inputEdad" placeholder="Edad">
+        </div>
+        <div class="form-group position-relative offset-2">
+            <label for="inputEdad">Rango:</label>
+            <input type="text" class="form-control" formControlName="rango" id="inputEdad" placeholder="Edad">
+        </div>
+        <div class="d-block w-100"></div>
+        <button type="button" (click)="createAtaque()" class="col-2 btn btn-secondary offset-3" [disabled]="registerForm.invalid">Registrar</button>
+        <button type="submit" (click)="modificarAtaque()" class="col-2 btn btn-secondary offset-2">Modificar</button>
+        <button type="submit" (click)="borrarAtaque()" class="col-2  btn btn-secondary offset-5">BORRAR</button>
+    </form>
+</div>
