@@ -1,10 +1,10 @@
 <hr>
 <div class="d-flex justify-content-center align-items-center flex-column my-2">
-        <h2>REGISTRO</h2>
+        <h2>FORMULARIO</h2>
         <form class="row col" [formGroup] = "registerForm">
             <div class="form-group position-relative offset-3">
-                <label for="idusuario">ID:</label>
-                <input type="number" formControlName="id" class="form-control" id="idusuario" placeholder="ID" value="">
+                <label for="idAtaque">ID:</label>
+                <input type="number" formControlName="idAtaque" class="form-control" id="idataque" placeholder="ID" value="">
             </div>
             <div class="form-group position-relative offset-2">
                 <label for="inputNombre">Nombre:</label>
@@ -12,29 +12,46 @@
             </div>
             <div class="d-block w-100"></div>
         <div class="form-group position-relative offset-3">
-            <label for="inputEmail">Daño:</label>
-            <input type="text" class="form-control" formControlName="daño" id="inputEmail" placeholder="Email">
+            <label for="daño">Daño:</label>
+            <input type="text" class="form-control" formControlName="danio" id="daño" placeholder="Daño">
         </div>
         <div class="form-group position-relative offset-2">
-            <label for="inputNickname">Elemento:</label>
-            <input type="text" class="form-control" formControlName="elemento" id="inputNickname" placeholder="Nickname">
+            <label for="elemento">Elemento:</label>
+            <input type="text" class="form-control" formControlName="elemento" id="elemento" placeholder="Elemento">
         </div>
         <div class="d-block w-100"></div>
         <div class="form-group position-relative offset-3">
-            <label for="inputPassword">Tipo:</label>
-            <input type="text" class="form-control" formControlName="tipo" id="inputPasword" placeholder="Contraseña">
+            <label for="tipo">Tipo:</label>
+            <input type="text" class="form-control" formControlName="tipo" id="tipo" placeholder="Tipo">
         </div>
         <div class="form-group position-relative offset-2">
-            <label for="inputEdad">Cooldown:</label>
-            <input type="text" class="form-control" formControlName="cooldown" id="inputEdad" placeholder="Edad">
+            <label for="cooldown">Cooldown:</label>
+            <input type="number" class="form-control" formControlName="cooldown" id="cooldown" placeholder="Cooldown">
         </div>
-        <div class="form-group position-relative offset-2">
-            <label for="inputEdad">Rango:</label>
-            <input type="text" class="form-control" formControlName="rango" id="inputEdad" placeholder="Edad">
+        <div class="form-group position-relative offset-3">
+            <label for="rango">Rango:</label>
+            <input type="number" class="form-control" formControlName="rango" id="rango" placeholder="rango">
         </div>
         <div class="d-block w-100"></div>
         <button type="button" (click)="createAtaque()" class="col-2 btn btn-secondary offset-3" [disabled]="registerForm.invalid">Registrar</button>
         <button type="submit" (click)="modificarAtaque()" class="col-2 btn btn-secondary offset-2">Modificar</button>
-        <button type="submit" (click)="borrarAtaque()" class="col-2  btn btn-secondary offset-5">BORRAR</button>
+        <button type="submit" (click)="borrarAtaque()" class="col-2  btn btn-secondary offset-3 my-4">BORRAR</button>
+        <button type="submit" (click)="getAtaque()" class="col-2  btn btn-secondary offset-2 my-4">SELECCIONA</button>
     </form>
-</div>
+    
+    <div *ngIf='ataque'>
+        <div class="card-header bg-dark text-white">
+            <h5>
+                {{ataque.nombre}}
+            </h5> 
+        </div>
+        <div class="card-body bg-secondary text-white">
+            <p class="card-title">ID <i class="fas fa-long-arrow-alt-right"></i> {{ataque.idAtaque}}</p>
+            <p class="card-text">DAÑO <i class="fas fa-long-arrow-alt-right"></i> {{ataque.danio}}</p>
+            <p class="card-text">ELEMENTO <i class="fas fa-long-arrow-alt-right"></i> {{ataque.elemento}}</p>
+            <p class="card-text">COOLDOWN <i class="fas fa-long-arrow-alt-right"></i> {{ataque.cooldown}}</p>
+            <p class="card-text">RANGO <i class="fas fa-long-arrow-alt-right"></i> {{ataque.rango}}</p>
+            <p class="card-text">TIPO <i class="fas fa-long-arrow-alt-right"></i> {{ataque.tipo}}</p>
+        </div>
+    </div>
+

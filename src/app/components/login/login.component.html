@@ -13,7 +13,7 @@
         <input id="password" formControlName="password" type="password" class="form-control">
 
         <div class="row align-items-center justify-content-center m-2">
-          <button type="submit" class="col-10 btn btn-primary" [disabled]="logForm.invalid">Log In</button>
+          <button routerLink='/home' type="submit" class="col-10 btn btn-primary" [disabled]="logForm.invalid">Log In</button>
         </div>
       </form>
     </div>
@@ -44,7 +44,7 @@
         <input id="passwordReg" formControlName="password" type="password" class="form-control">
 
         <div class="row align-items-center justify-content-center m-2">
-          <button class="col-10 btn btn-primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+          <button routerLink='/home' class="col-10 btn btn-primary" type="submit" [disabled]="registerForm.invalid">Register</button>
         </div>
       </form>
     </div>

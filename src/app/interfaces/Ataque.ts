@@ -1,7 +1,7 @@
 export interface Ataque {
-    id?: number,
+    idAtaque?: number,
     nombre: string,
-    daño: number, 
+    danio: number, 
     elemento: string, 
     tipo: string, 
     cooldown: number, 
