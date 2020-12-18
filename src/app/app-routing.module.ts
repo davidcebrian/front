@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AtaquesComponent } from './components/ataques/ataques.component';
-import { HomeComponent } from './components/home/home.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { LoginComponent } from './components/login/login.component';
+import { AtaquesComponent } from 'src/app/components/ataques/ataques.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { InicioComponent } from 'src/app/components/inicio/inicio.component';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'inicio', pathMatch: 'full'},

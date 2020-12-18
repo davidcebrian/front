@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { UserServiceService } from 'src/app/services/user-service.service';
-import { User } from '../../interfaces/User';
+import { User } from 'src/app/interfaces/User';
 
 @Component({
   selector: 'login',
